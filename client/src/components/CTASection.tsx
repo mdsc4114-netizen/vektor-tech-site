@@ -12,6 +12,11 @@ export default function CTASection() {
     }
   };
 
+  const whatsappMessage = encodeURIComponent(
+    'Olá! Visitei o site da Vektor Tech e gostaria de saber mais sobre as soluções de automação e tecnologia para empresas.'
+  );
+  const whatsappUrl = `https://wa.me/55?text=${whatsappMessage}`;
+
   return (
     <section className="py-20 md:py-32 bg-gradient-to-r from-[#0A2540] via-[#1a3a5c] to-[#2563EB] relative overflow-hidden">
       {/* Background Pattern */}
@@ -42,14 +47,26 @@ export default function CTASection() {
             {t('cta.descricao')}
           </p>
 
-          {/* CTA Button */}
-          <Button
-            onClick={() => scrollToSection('contato')}
-            className="bg-white text-[#0A2540] hover:bg-gray-100 font-bold py-6 px-10 rounded-lg inline-flex items-center gap-2 group"
-          >
-            {t('cta.botao')}
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button
+              onClick={() => scrollToSection('contato')}
+              className="bg-white text-[#0A2540] hover:bg-gray-100 font-bold py-6 px-10 rounded-lg inline-flex items-center gap-2 group"
+            >
+              {t('cta.botao')}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] text-white hover:bg-[#20BA5A] font-bold py-6 px-10 rounded-lg inline-flex items-center gap-2 transition-all duration-300 hover:shadow-lg"
+            >
+              {t('cta.botaoWhatsApp')}
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
 
           {/* Additional Info */}
           <div className="mt-12 pt-8 border-t border-white/20">

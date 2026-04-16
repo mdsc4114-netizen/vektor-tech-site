@@ -54,7 +54,7 @@ export default function HeroSection() {
             </Button>
 
             <Button
-              onClick={() => scrollToSection('solucoes')}
+              onClick={() => scrollToSection('contato')}
               variant="outline"
               className="border-2 border-[#2563EB] text-[#2563EB] hover:bg-[#2563EB]/5 font-semibold py-6 px-8 rounded-lg"
             >

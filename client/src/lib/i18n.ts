@@ -19,8 +19,8 @@ export const translations = {
     hero: {
       titulo: 'Tecnologia que impulsiona resultados.',
       subtitulo: 'Automatizamos processos e desenvolvemos soluções digitais para acelerar o crescimento da sua empresa.',
-      btnDiagnostico: 'Solicitar Diagnóstico Gratuito',
-      btnSolucoes: 'Conhecer Soluções',
+      btnDiagnostico: 'Quero automatizar meu negócio',
+      btnSolucoes: 'Receber diagnóstico gratuito',
     },
     // About Section
     about: {
@@ -110,7 +110,8 @@ export const translations = {
     cta: {
       titulo: 'Pronto para transformar seu negócio com tecnologia?',
       descricao: 'Entre em contato conosco e descubra como podemos ajudar sua empresa a crescer.',
-      botao: 'Solicitar Contato',
+      botao: 'Agendar diagnóstico gratuito',
+      botaoWhatsApp: 'Falar no WhatsApp',
     },
     // Contact Form
     contact: {
