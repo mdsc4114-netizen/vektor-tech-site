@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Language } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
@@ -17,6 +17,11 @@ export default function Header() {
       setIsMenuOpen(false);
     }
   };
+
+  const whatsappMessage = encodeURIComponent(
+    'Olá! Visitei o site da Vektor Tech e gostaria de saber mais sobre as soluções de automação e tecnologia para empresas.'
+  );
+  const whatsappUrl = `https://wa.me/55?text=${whatsappMessage}`;
 
   const navItems = [
     { label: t('header.inicio'), id: 'inicio' },
@@ -55,12 +60,15 @@ export default function Header() {
 
 
           {/* CTA Button - Desktop */}
-          <Button
-            onClick={() => scrollToSection('contato')}
-            className="hidden md:flex bg-gradient-to-r from-[#2563EB] to-[#00C2FF] hover:shadow-lg transition-shadow"
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex bg-gradient-to-r from-[#25D366] to-[#20BA5A] hover:shadow-lg transition-shadow text-white font-semibold py-2 px-6 rounded-lg items-center gap-2 group"
           >
-            {t('header.faleConosco')}
-          </Button>
+            <MessageCircle className="w-5 h-5" />
+            Falar no WhatsApp
+          </a>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -89,12 +97,15 @@ export default function Header() {
                 {item.label}
               </button>
             ))}
-            <Button
-              onClick={() => scrollToSection('contato')}
-              className="w-full bg-gradient-to-r from-[#2563EB] to-[#00C2FF] hover:shadow-lg transition-shadow mt-2"
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gradient-to-r from-[#25D366] to-[#20BA5A] hover:shadow-lg transition-shadow text-white font-semibold py-2 px-6 rounded-lg flex items-center justify-center gap-2 mt-2"
             >
-              {t('header.faleConosco')}
-            </Button>
+              <MessageCircle className="w-5 h-5" />
+              Falar no WhatsApp
+            </a>
           </div>
         </div>
       )}
