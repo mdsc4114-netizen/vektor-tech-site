@@ -96,7 +96,9 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h3 className="font-bold text-[#0A2540] mb-1">Telefone</h3>
-                  <p className="text-gray-600">+55 (11) 9999-9999</p>
+                  <a href="https://wa.me/5521966482868?text=Olá!%20Vi%20o%20site%20da%20Vektor%20Tech%20e%20quero%20entender%20como%20posso%20conseguir%20mais%20clientes." target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#2563EB] transition-colors">
+                    +55 21 96648-2868
+                  </a>
                 </div>
               </div>
 
@@ -109,7 +111,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h3 className="font-bold text-[#0A2540] mb-1">Localização</h3>
-                  <p className="text-gray-600">São Paulo, SP - Brasil</p>
+                  <p className="text-gray-600">Rio de Janeiro, RJ - Brasil</p>
                 </div>
               </div>
 

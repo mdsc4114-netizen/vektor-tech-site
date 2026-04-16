@@ -17,10 +17,7 @@ export default function Header() {
     }
   };
 
-  const whatsappMessage = encodeURIComponent(
-    'Olá! Visitei o site da Vektor Tech e gostaria de saber mais sobre as soluções de automação e tecnologia para empresas.'
-  );
-  const whatsappUrl = `https://wa.me/55?text=${whatsappMessage}`;
+  const whatsappUrl = 'https://wa.me/5521966482868?text=Olá!%20Vi%20o%20site%20da%20Vektor%20Tech%20e%20quero%20entender%20como%20posso%20conseguir%20mais%20clientes.';
 
   const navItems = [
     { label: t('header.inicio'), id: 'inicio' },

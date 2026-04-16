@@ -4,11 +4,7 @@ import { useState } from 'react';
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
-  const whatsappNumber = '55'; // Substitua com seu número real
-  const whatsappMessage = encodeURIComponent(
-    'Olá! Visitei o site da Vektor Tech e gostaria de saber mais sobre as soluções de automação e tecnologia para empresas.'
-  );
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappUrl = 'https://wa.me/5521966482868?text=Olá!%20Vi%20o%20site%20da%20Vektor%20Tech%20e%20quero%20entender%20como%20posso%20conseguir%20mais%20clientes.';
 
   return (
     <>
@@ -18,7 +14,7 @@ export default function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-40 group"
-        title="Fale conosco no WhatsApp"
+        title="Fale conosco no WhatsApp - +55 21 96648-2868"
         aria-label="Abrir WhatsApp"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -26,7 +22,7 @@ export default function WhatsAppButton() {
         {/* Tooltip */}
         {isHovered && (
           <div className="absolute bottom-20 right-0 bg-gray-900 text-white text-sm px-4 py-2 rounded-lg whitespace-nowrap animate-in fade-in duration-200">
-            Fale com um especialista
+            Fale no WhatsApp: +55 21 96648-2868
             <div className="absolute bottom-0 right-4 translate-y-full w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-900" />
           </div>
         )}

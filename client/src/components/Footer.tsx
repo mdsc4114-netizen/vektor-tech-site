@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Facebook, Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
+import { Facebook, Linkedin, Twitter, Instagram, Mail, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -85,8 +85,19 @@ export default function Footer() {
                   contato@vektortech.tech
                 </a>
               </div>
+              <div className="flex items-start gap-2">
+                <MessageCircle className="w-5 h-5 text-[#00C2FF] flex-shrink-0 mt-0.5" />
+                <a
+                  href="https://wa.me/5521966482868?text=Olá!%20Vi%20o%20site%20da%20Vektor%20Tech%20e%20quero%20entender%20como%20posso%20conseguir%20mais%20clientes."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-[#00C2FF] transition-colors text-sm"
+                >
+                  +55 21 96648-2868
+                </a>
+              </div>
               <p className="text-gray-300 text-sm">
-                São Paulo, SP - Brasil
+                Rio de Janeiro, RJ - Brasil
               </p>
             </div>
           </div>
