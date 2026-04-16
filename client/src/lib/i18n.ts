@@ -19,7 +19,7 @@ export const translations = {
     hero: {
       titulo: 'Tecnologia que impulsiona resultados.',
       subtitulo: 'Automatizamos processos e desenvolvemos soluções digitais para acelerar o crescimento da sua empresa.',
-      btnDiagnostico: 'Quero automatizar meu negócio',
+      btnDiagnostico: 'Quero mais clientes no meu negócio',
       btnSolucoes: 'Receber diagnóstico gratuito',
     },
     // About Section
