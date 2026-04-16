@@ -34,9 +34,14 @@ export default function HeroSection() {
       <div className="container relative z-10">
         <div className="max-w-3xl">
           {/* Main Title */}
-          <h1 className="text-4xl md:text-6xl font-bold text-[#0A2540] mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#0A2540] mb-4 leading-tight">
             {t('hero.titulo')}
           </h1>
+
+          {/* Pain Point */}
+          <p className="text-lg md:text-xl text-[#2563EB] font-semibold mb-6 leading-relaxed max-w-2xl">
+            Você perde clientes todos os dias por falta de automação, organização e acompanhamento?
+          </p>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-2xl">
