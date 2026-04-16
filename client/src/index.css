@@ -146,14 +146,7 @@
     @apply cursor-pointer;
   }
   
-  /* Typography */
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins;
-  }
-  
-  body, p, span, a, li {
-    @apply font-inter;
-  }
+
 }
 
 @layer components {

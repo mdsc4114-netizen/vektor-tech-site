@@ -1,11 +1,42 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Zap, Code, Plug, BarChart3, Lightbulb } from 'lucide-react';
 
+interface Service {
+  titulo: string;
+  descricao: string;
+}
+
 export default function ServicesSection() {
   const { t } = useLanguage();
 
   const serviceIcons = [Zap, Code, Plug, BarChart3, Lightbulb];
-  const servicesData = (t('services.servicos') as unknown as Array<{ titulo: string; descricao: string }>);
+  
+  // Get services data - handle both string and array returns
+  const servicesRaw = t('services.servicos');
+  const servicesData: Service[] = Array.isArray(servicesRaw) 
+    ? servicesRaw 
+    : [
+        {
+          titulo: 'Automação de Processos e Vendas',
+          descricao: 'Otimize seus processos com automação inteligente e aumente sua produtividade.',
+        },
+        {
+          titulo: 'Desenvolvimento de Software e SaaS',
+          descricao: 'Desenvolvemos soluções customizadas e plataformas SaaS escaláveis.',
+        },
+        {
+          titulo: 'Integração de Sistemas e APIs',
+          descricao: 'Conecte seus sistemas e maximize a eficiência operacional.',
+        },
+        {
+          titulo: 'Inteligência de Dados e Analytics',
+          descricao: 'Extraia insights valiosos dos seus dados para tomar decisões melhores.',
+        },
+        {
+          titulo: 'Consultoria em Transformação Digital',
+          descricao: 'Guiamos sua empresa através da jornada de transformação digital.',
+        },
+      ];
 
   return (
     <section id="servicos" className="py-20 md:py-32 bg-white">

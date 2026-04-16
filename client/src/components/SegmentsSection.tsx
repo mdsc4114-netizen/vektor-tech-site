@@ -1,11 +1,38 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Stethoscope, Briefcase, Heart, TrendingUp } from 'lucide-react';
 
+interface Segment {
+  titulo: string;
+  descricao: string;
+}
+
 export default function SegmentsSection() {
   const { t } = useLanguage();
 
   const segmentIcons = [Stethoscope, Briefcase, Heart, TrendingUp];
-  const segmentsData = (t('segments.segmentos') as unknown as Array<{ titulo: string; descricao: string }>);
+  
+  // Get segments data - handle both string and array returns
+  const segmentsRaw = t('segments.segmentos');
+  const segmentsData: Segment[] = Array.isArray(segmentsRaw)
+    ? segmentsRaw
+    : [
+        {
+          titulo: 'Clínicas Médicas',
+          descricao: 'Automação de agendamentos, gestão de pacientes e integração com sistemas de saúde.',
+        },
+        {
+          titulo: 'Escritórios de Advocacia',
+          descricao: 'Gestão de processos jurídicos, automação de documentos e controle de prazos.',
+        },
+        {
+          titulo: 'Corretores de Planos de Saúde',
+          descricao: 'Plataforma de gestão de clientes, cotações automatizadas e integração com operadoras.',
+        },
+        {
+          titulo: 'Pequenas e Médias Empresas',
+          descricao: 'Soluções escaláveis para crescimento e otimização operacional.',
+        },
+      ];
 
   return (
     <section id="solucoes" className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">

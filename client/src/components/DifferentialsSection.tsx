@@ -1,11 +1,38 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Zap, Layers, Users, Target } from 'lucide-react';
 
+interface Differential {
+  titulo: string;
+  descricao: string;
+}
+
 export default function DifferentialsSection() {
   const { t } = useLanguage();
 
   const differentialIcons = [Zap, Layers, Users, Target];
-  const differentialsData = (t('differentials.diferenciais') as unknown as Array<{ titulo: string; descricao: string }>);
+  
+  // Get differentials data - handle both string and array returns
+  const differentialsRaw = t('differentials.diferenciais');
+  const differentialsData: Differential[] = Array.isArray(differentialsRaw)
+    ? differentialsRaw
+    : [
+        {
+          titulo: 'Tecnologia de Ponta',
+          descricao: 'Utilizamos as tecnologias mais modernas e eficientes do mercado.',
+        },
+        {
+          titulo: 'Soluções Escaláveis',
+          descricao: 'Nossas soluções crescem com seu negócio, sem limitações.',
+        },
+        {
+          titulo: 'Atendimento Consultivo',
+          descricao: 'Atuamos como parceiros estratégicos, não apenas fornecedores.',
+        },
+        {
+          titulo: 'Foco em Resultados',
+          descricao: 'Cada projeto é orientado por métricas e resultados mensuráveis.',
+        },
+      ];
 
   return (
     <section className="py-20 md:py-32 bg-white">
