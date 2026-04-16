@@ -106,6 +106,45 @@ export const translations = {
         },
       ],
     },
+    // FAQ Section
+    faq: {
+      titulo: 'Perguntas Frequentes',
+      descricao: 'Encontre respostas para as dúvidas mais comuns sobre a Vektor Tech e nossos serviços.',
+      perguntas: [
+        {
+          pergunta: 'O que é a Vektor Tech?',
+          resposta: 'A Vektor Tech é uma empresa especializada em tecnologia, automação de processos e inteligência de dados. Somos parceiros de transformação digital para empresas que desejam crescer e otimizar suas operações através de soluções inovadoras.',
+        },
+        {
+          pergunta: 'Quais serviços a empresa oferece?',
+          resposta: 'Oferecemos automação de processos e vendas, desenvolvimento de software e SaaS, integração de sistemas e APIs, inteligência de dados e analytics, e consultoria em transformação digital. Cada serviço é customizado para atender às necessidades específicas do seu negócio.',
+        },
+        {
+          pergunta: 'Para quais tipos de empresas as soluções são indicadas?',
+          resposta: 'Nossas soluções são indicadas para clínicas médicas, escritórios de advocacia, corretores de planos de saúde, pequenas e médias empresas. Qualquer negócio que busque otimizar processos, reduzir custos e aumentar a eficiência pode se beneficiar de nossas soluções.',
+        },
+        {
+          pergunta: 'Quanto tempo leva para implementar uma automação?',
+          resposta: 'O tempo de implementação varia conforme a complexidade do projeto. Projetos simples podem ser implementados em semanas, enquanto projetos mais complexos podem levar alguns meses. Realizamos um diagnóstico gratuito para fornecer um cronograma mais preciso.',
+        },
+        {
+          pergunta: 'As soluções são personalizadas?',
+          resposta: 'Sim! Todas as nossas soluções são desenvolvidas sob medida para atender às necessidades específicas do seu negócio. Não oferecemos soluções genéricas. Cada projeto é único e adaptado à realidade da sua empresa.',
+        },
+        {
+          pergunta: 'Preciso ter conhecimento técnico para utilizar os sistemas?',
+          resposta: 'Não é necessário ter conhecimento técnico. Desenvolvemos interfaces intuitivas e fornecemos treinamento completo para sua equipe. Nosso objetivo é que você utilize a tecnologia de forma simples e eficaz.',
+        },
+        {
+          pergunta: 'Como funciona o diagnóstico gratuito?',
+          resposta: 'O diagnóstico gratuito consiste em uma análise detalhada dos seus processos atuais, identificação de gargalos e oportunidades de automação. Apresentamos um relatório com recomendações e um plano de ação customizado para sua empresa.',
+        },
+        {
+          pergunta: 'Quanto custa contratar os serviços da Vektor Tech?',
+          resposta: 'Os valores variam conforme o escopo e complexidade do projeto. Oferecemos diferentes modelos de contratação: projetos pontuais, contratos de manutenção, ou parcerias de longo prazo. Solicite um orçamento personalizado para sua necessidade.',
+        },
+      ],
+    },
     // CTA Section
     cta: {
       titulo: 'Pronto para transformar seu negócio com tecnologia?',
