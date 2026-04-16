@@ -34,6 +34,22 @@ export default function DifferentialsSection() {
         },
       ];
 
+  // Institutional values replacing fake metrics
+  const institutionalValues = [
+    {
+      titulo: 'Soluções sob medida',
+      descricao: 'Projetos adaptados à realidade e aos objetivos de cada negócio.',
+    },
+    {
+      titulo: 'Foco em resultados reais',
+      descricao: 'Tecnologia aplicada com objetivo comercial, eficiência e crescimento.',
+    },
+    {
+      titulo: 'Atendimento consultivo',
+      descricao: 'Estratégia, implementação e evolução contínua para cada cliente.',
+    },
+  ];
+
   return (
     <section className="py-20 md:py-32 bg-white">
       <div className="container">
@@ -76,19 +92,15 @@ export default function DifferentialsSection() {
         {/* Divider */}
         <div className="h-px bg-gradient-to-r from-transparent via-[#2563EB] to-transparent my-16" />
 
-        {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          {[
-            { number: '500+', label: 'Clientes Satisfeitos' },
-            { number: '10+', label: 'Anos de Experiência' },
-            { number: '98%', label: 'Taxa de Satisfação' },
-            { number: '24/7', label: 'Suporte Dedicado' },
-          ].map((stat, index) => (
-            <div key={index} className="p-6">
-              <div className="text-3xl md:text-4xl font-bold text-[#2563EB] mb-2">
-                {stat.number}
-              </div>
-              <p className="text-gray-600">{stat.label}</p>
+        {/* Institutional Values Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {institutionalValues.map((value, index) => (
+            <div
+              key={index}
+              className="p-8 bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 hover:border-[#2563EB] hover:shadow-lg transition-all duration-300"
+            >
+              <h3 className="text-xl font-bold text-[#0A2540] mb-4">{value.titulo}</h3>
+              <p className="text-gray-600 leading-relaxed text-base">{value.descricao}</p>
             </div>
           ))}
         </div>

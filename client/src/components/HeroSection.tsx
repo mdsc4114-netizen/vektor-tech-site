@@ -62,27 +62,7 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 border-t border-gray-300">
-            <div>
-              <div className="text-2xl md:text-3xl font-bold text-[#2563EB]">500+</div>
-              <p className="text-sm text-gray-600">
-                {t('hero.titulo').includes('português') ? 'Clientes Atendidos' : 'Clients Served'}
-              </p>
-            </div>
-            <div>
-              <div className="text-2xl md:text-3xl font-bold text-[#2563EB]">10+</div>
-              <p className="text-sm text-gray-600">
-                {t('hero.titulo').includes('português') ? 'Anos de Experiência' : 'Years Experience'}
-              </p>
-            </div>
-            <div>
-              <div className="text-2xl md:text-3xl font-bold text-[#2563EB]">98%</div>
-              <p className="text-sm text-gray-600">
-                {t('hero.titulo').includes('português') ? 'Satisfação' : 'Satisfaction'}
-              </p>
-            </div>
-          </div>
+
         </div>
       </div>
 
