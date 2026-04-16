@@ -1,4 +1,4 @@
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { Target, Eye, Heart } from 'lucide-react';
 
 export default function AboutSection() {

@@ -1,5 +1,5 @@
 import { Star } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function TestimonialsSection() {
   const { t } = useLanguage();

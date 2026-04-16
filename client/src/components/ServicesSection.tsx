@@ -1,4 +1,4 @@
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { Zap, Code, Plug, BarChart3, Lightbulb } from 'lucide-react';
 
 interface Service {

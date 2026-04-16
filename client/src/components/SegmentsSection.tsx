@@ -1,4 +1,4 @@
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { Stethoscope, Briefcase, Heart, TrendingUp } from 'lucide-react';
 
 interface Segment {

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Menu, X, MessageCircle, ChevronDown } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Language } from '@/lib/i18n';
-import { Button } from '@/components/ui/button';
+import { useLanguage } from '../contexts/LanguageContext';
+import { Language } from '../lib/i18n';
+import { Button } from './ui/button';
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();

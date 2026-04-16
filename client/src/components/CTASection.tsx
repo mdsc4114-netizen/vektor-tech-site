@@ -1,5 +1,5 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
+import { useLanguage } from '../contexts/LanguageContext';
+import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
 
 export default function CTASection() {

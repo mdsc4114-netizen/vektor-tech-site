@@ -1,7 +1,7 @@
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function PequenasMediasEmpresas() {
   return (

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
+import { useLanguage } from '../contexts/LanguageContext';
+import { Button } from './ui/button';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { toast } from 'sonner';
 
