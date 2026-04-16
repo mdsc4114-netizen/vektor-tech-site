@@ -66,20 +66,28 @@ export const translations = {
       descricao: 'Soluções especializadas para diferentes setores e necessidades.',
       segmentos: [
         {
-          titulo: 'Clínicas Médicas',
+          titulo: 'Profissionais da Saúde',
           descricao: 'Automação de agendamentos, gestão de pacientes e integração com sistemas de saúde.',
         },
         {
-          titulo: 'Escritórios de Advocacia',
-          descricao: 'Gestão de processos jurídicos, automação de documentos e controle de prazos.',
+          titulo: 'Escritórios Jurídicos',
+          descricao: 'Gestão de processos, automação de documentos e controle de prazos.',
         },
         {
-          titulo: 'Corretores de Planos de Saúde',
-          descricao: 'Plataforma de gestão de clientes, cotações automatizadas e integração com operadoras.',
+          titulo: 'Corretores e Consultores',
+          descricao: 'Automação de vendas, CRM e integração com plataformas de cotação.',
         },
         {
           titulo: 'Pequenas e Médias Empresas',
           descricao: 'Soluções escaláveis para crescimento e otimização operacional.',
+        },
+        {
+          titulo: 'Profissionais Liberais',
+          descricao: 'Organização de atendimentos, automação de tarefas e captação de clientes.',
+        },
+        {
+          titulo: 'Criadores de Conteúdo',
+          descricao: 'Automação de funis, gestão de audiência e monetização digital.',
         },
       ],
     },
