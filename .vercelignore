@@ -1,0 +1,5 @@
+server/
+.manus-logs/
+node_modules/
+.git/
+.env.local
