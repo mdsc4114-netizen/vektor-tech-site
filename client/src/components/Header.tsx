@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X, MessageCircle, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Language } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
@@ -7,8 +7,7 @@ import { Button } from '@/components/ui/button';
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-
+  const [isSegmentosOpen, setIsSegmentosOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -29,6 +28,12 @@ export default function Header() {
     { label: t('header.servicos'), id: 'servicos' },
     { label: t('header.sobre'), id: 'sobre' },
     { label: t('header.contato'), id: 'contato' },
+  ];
+
+  const segmentosLinks = [
+    { label: 'Criadores de Conteúdo', href: '/criadores-de-conteudo' },
+    { label: 'Profissionais Liberais', href: '/profissionais-liberais' },
+    { label: 'Pequenas e Médias Empresas', href: '/pequenas-e-medias-empresas' },
   ];
 
   return (
@@ -53,11 +58,31 @@ export default function Header() {
               {item.label}
             </button>
           ))}
+          
+          {/* Dropdown Segmentos */}
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-[#2563EB] font-medium transition-colors text-sm flex items-center gap-1">
+              Segmentos
+              <ChevronDown className="w-4 h-4" />
+            </button>
+            <div className="absolute left-0 mt-0 w-56 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              {segmentosLinks.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.href}
+                  className={`block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#2563EB] text-sm transition-colors ${
+                    i === 0 ? 'rounded-t-lg' : ''
+                  } ${i === segmentosLinks.length - 1 ? 'rounded-b-lg' : ''}`}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Right Side Actions */}
         <div className="flex items-center gap-3 md:gap-4">
-
 
           {/* CTA Button - Desktop */}
           <a
@@ -97,6 +122,32 @@ export default function Header() {
                 {item.label}
               </button>
             ))}
+            
+            {/* Mobile Segmentos */}
+            <div className="border-t border-gray-200 pt-3 mt-3">
+              <button
+                onClick={() => setIsSegmentosOpen(!isSegmentosOpen)}
+                className="w-full text-left text-gray-700 hover:text-[#2563EB] font-medium transition-colors py-2 flex items-center justify-between"
+              >
+                Segmentos
+                <ChevronDown className={`w-4 h-4 transition-transform ${isSegmentosOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isSegmentosOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  {segmentosLinks.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.href}
+                      className="block text-gray-700 hover:text-[#2563EB] text-sm transition-colors py-1"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+            
             <a
               href={whatsappUrl}
               target="_blank"
