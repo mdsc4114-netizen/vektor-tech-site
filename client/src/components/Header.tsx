@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Language } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
@@ -8,9 +8,7 @@ export default function Header() {
   const { language, setLanguage, t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'pt-BR' ? 'en-US' : 'pt-BR');
-  };
+
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -54,14 +52,7 @@ export default function Header() {
 
         {/* Right Side Actions */}
         <div className="flex items-center gap-3 md:gap-4">
-          {/* Language Toggle */}
-          <button
-            onClick={toggleLanguage}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-            title={language === 'pt-BR' ? 'Switch to English' : 'Mudar para Português'}
-          >
-            <Globe className="w-5 h-5 text-gray-700" />
-          </button>
+
 
           {/* CTA Button - Desktop */}
           <Button

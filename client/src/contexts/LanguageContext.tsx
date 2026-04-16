@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Language, getLanguageFromBrowser, translations } from '@/lib/i18n';
+import { Language, translations } from '@/lib/i18n';
 
 interface LanguageContextType {
   language: Language;
@@ -11,27 +11,24 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
-    // Try to get from localStorage first
+    // Always use Portuguese (PT-BR) as default
     const stored = localStorage.getItem('language');
-    if (stored === 'pt-BR' || stored === 'en-US') {
-      return stored;
-    }
-    // Fall back to browser language
-    return getLanguageFromBrowser();
+    return (stored as Language) || 'pt-BR';
   });
 
   useEffect(() => {
     localStorage.setItem('language', language);
-    document.documentElement.lang = language;
+    document.documentElement.lang = 'pt-BR';
   }, [language]);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
+    // Keep language as PT-BR only
+    setLanguageState('pt-BR');
   };
 
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     const keys = key.split('.');
-    let value: any = translations[language];
+    let value: any = translations['pt-BR'];
 
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
@@ -41,7 +38,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       }
     }
 
-    return typeof value === 'string' ? value : key;
+    return value !== undefined ? value : key;
   };
 
   return (
