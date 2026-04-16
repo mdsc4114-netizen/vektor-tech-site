@@ -106,6 +106,28 @@ export const translations = {
         },
       ],
     },
+    // Testimonials Section
+    testimonials: {
+      titulo: 'O que nossos clientes dizem',
+      descricao: 'Conheça os resultados que a Vektor Tech trouxe para empresas como a sua.',
+      depoimentos: [
+        {
+          texto: 'Depois da implementação, conseguimos organizar nosso atendimento e reduzir a perda de clientes.',
+          autor: 'Empresário',
+          cargo: 'Setor de Serviços',
+        },
+        {
+          texto: 'O processo ficou muito mais rápido e profissional. Hoje temos mais controle e previsibilidade.',
+          autor: 'Gestor Comercial',
+          cargo: 'Empresa de Tecnologia',
+        },
+        {
+          texto: 'A automação trouxe mais eficiência e aumentou nossa capacidade de atendimento.',
+          autor: 'Pequena Empresa',
+          cargo: 'Setor de Comércio',
+        },
+      ],
+    },
     // FAQ Section
     faq: {
       titulo: 'Perguntas Frequentes',

@@ -4,7 +4,7 @@ import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
 import SegmentsSection from '@/components/SegmentsSection';
 import DifferentialsSection from '@/components/DifferentialsSection';
-import CTASection from '@/components/CTASection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
@@ -19,7 +19,7 @@ export default function Home() {
         <ServicesSection />
         <SegmentsSection />
         <DifferentialsSection />
-        <CTASection />
+        <TestimonialsSection />
         <FAQSection />
         <ContactForm />
       </main>
